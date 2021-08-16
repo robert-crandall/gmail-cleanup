@@ -19,7 +19,7 @@ function Uninstall() {
   
   var triggers = ScriptApp.getProjectTriggers();
   for (var i=0; i<triggers.length; i++) {
-    ScriptApp.archiveTrigger(triggers[i]);
+    ScriptApp.deleteTrigger(triggers[i]);
   }
   
 }
@@ -103,7 +103,7 @@ function Delete(search) {
 // Archive function archives messages found in a given search string
 // No logic is present to prevent archiving special messages
 function Archive(search) {
-    console.info(search)
+    console.info("Archiving messages matching this query: " + search)
     var age = new Date();
     age.setDate(age.getDate() - DAYS);
     var total = 0;
