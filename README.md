@@ -16,3 +16,9 @@ Matches: from:(homedepot.com OR amazon.com)
 Do this: Apply label "Keep/Shopping"
 ```
 
+## Email-Senders.gs
+
+This script:
+- Counts number of emails per sender, export to Google Sheets
+
+This is to help create the allowlists for creating the "Keep" labels
